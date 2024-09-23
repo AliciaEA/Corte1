@@ -19,11 +19,11 @@ namespace Corte1.models
         {
             if (Edad >= 18)
             {
-                return "Es mayor de edad";
+                return "es mayor de edad";
             }
             else
             {
-                return "Es menor de edad";
+                return "es menor de edad";
             }
         }
     }

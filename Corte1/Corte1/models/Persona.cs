@@ -12,5 +12,16 @@ namespace Corte1.models
         public string Apellidos { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public string Ciudad { get; set; }
+
+        public int CalcularEdad()
+        {
+            DateTime fechaActual = DateTime.Now;
+            int edad = fechaActual.Year - FechaNacimiento.Year;
+            if (FechaNacimiento > fechaActual.AddYears(-edad))
+            {
+                edad--;
+            }
+            return edad;
+        }
     }
 }
